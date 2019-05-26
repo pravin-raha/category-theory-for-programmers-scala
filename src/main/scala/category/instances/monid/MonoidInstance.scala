@@ -1,4 +1,4 @@
-package category.instances.string
+package category.instances.monid
 
 import category.Monoid
 
@@ -10,4 +10,3 @@ object MonoidInstance {
     override def combine(a: String, b: String): String = a ++ b
   }
 }
-
