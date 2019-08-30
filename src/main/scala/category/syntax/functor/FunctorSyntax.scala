@@ -2,8 +2,6 @@ package category.syntax.functor
 
 import category.Functor
 
-import scala.language.higherKinds
-
 object FunctorSyntax {
 
   implicit class FunctorOps[F[_], A](a: F[A]) {
