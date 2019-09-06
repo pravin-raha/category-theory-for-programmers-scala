@@ -21,4 +21,8 @@ object FunctorInstance {
       }
     }
 
+  implicit def functorConstInstance[C]: Functor[Const[C, ?]] = new Functor[Const[C, ?]] {
+    override def map[A, B](a: Const[C, A])(f: A => B): Const[C, B] = Const[C, B](a.v)
+  }
+
 }
