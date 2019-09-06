@@ -6,6 +6,8 @@ object MonoidSyntax {
 
   implicit class MonoidOps[A](a: A) {
     def |+|(b: A)(implicit m: Monoid[A]): A = m.combine(a, b)
+
+    def empty(implicit m: Monoid[A]): A = m.empty
   }
 
 }
