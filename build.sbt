@@ -12,3 +12,7 @@ addCompilerPlugin("org.typelevel" %% "kind-projector" % "0.10.3")
 libraryDependencies += "org.scalactic"  %% "scalactic"  % "3.0.8"  % "test"
 libraryDependencies += "org.scalatest"  %% "scalatest"  % "3.0.8"  % "test"
 libraryDependencies += "org.scalacheck" %% "scalacheck" % "1.14.0" % "test"
+
+sonarUseExternalConfig := true
+coverageEnabled := true
+coverageHighlighting := true
