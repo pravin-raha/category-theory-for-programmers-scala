@@ -5,5 +5,9 @@ trait Printable[A] {
 }
 
 object Printable {
-  def apply[A: Printable]: Printable[A] = implicitly[Printable[A]]
+  def apply[A](implicit ev: Printable[A]): Printable[A] = ev
+
+  def format[A](f: A => String): Printable[A] = new Printable[A] {
+    def format(a: A): String = f(a)
+  }
 }

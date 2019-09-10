@@ -5,5 +5,5 @@ trait ContravariantFunctor[F[_]] {
 }
 
 object ContravariantFunctor {
-  def apply[F[_]: ContravariantFunctor]: ContravariantFunctor[F] = implicitly[ContravariantFunctor[F]]
+  def apply[F[_]](implicit ev: ContravariantFunctor[F]): ContravariantFunctor[F] = ev
 }
